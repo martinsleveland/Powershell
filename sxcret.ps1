@@ -26,6 +26,10 @@ function fetchFiles {
     Write-Host "Fetching files..."
 }
 
+function fetchBrowserKeys {
+		Write-Host "Select browser"
+}
+
 function others {
     Write-Host "Fetching Wi-Fi profiles..."
     
