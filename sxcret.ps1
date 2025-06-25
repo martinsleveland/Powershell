@@ -4,10 +4,11 @@ Write-Host "----------------------------- "
 Write-Host "Pick a number from the list below:"
 Write-Host "----------------------------- "
 Write-Host "1. | System information"
-Write-Host "2. | Network configuration"
-Write-Host "3. | File management"
-Write-Host "4. | Others"
-Write-Host "5. | Secure information"
+Weite-Host "2. | Local users"
+Write-Host "3. | Network configuration"
+Write-Host "4. | File management"
+Write-Host "5. | Others"
+Write-Host "6. | Secure information"
 Write-Host "0. | Exit" 
 Write-Host "----------------------------- "
 
@@ -16,6 +17,13 @@ Write-Host "----------------------------- "
 
 function fetchSystemInfo {
     Write-Host "Fetching system information..."
+}
+
+function fetchUsers {
+		Wtite-Host "Fetching users..."
+		for ($i = 0, $i -lt $users.Count; $i++) {
+				Write-Host "$($i + 1. $($users[$i])"
+		}
 }
 
 function fetchNetworkConf {
@@ -100,6 +108,10 @@ switch ($choice) {
         Start-Process msinfo32
     }
     2 {
+        Write-Host "You chose 'Secure information'."
+        others
+    }
+    3 {
         Write-Host "You chose 'Network configuration'."
         Write-Host "Fetching network information..."
         
@@ -115,18 +127,18 @@ switch ($choice) {
         # Pause to allow user to read the information
         Read-Host "Press Enter to continue..."
     }
-    3 {
+    4 {
         Write-Host "You chose 'File management'."
     }
-    4 {
+    5 {
         Write-Host "You chose 'Others'."
         others
     }
-    5 {
+    6 {
         Write-Host "You chose 'Secure information'."
         others
     }
-    0 {
+    7 {
         Write-Host "Exitting the program. Goodbye!"
         exit
     }
