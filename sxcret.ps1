@@ -113,7 +113,8 @@ switch ($choice) {
         others
     }
     3 {
-        Write-Host "You chose 'Secure information'."
+        Write-Host "You chose 'systeminfo'."
+				systeminfo.Read()
         others
     }
     4 {
