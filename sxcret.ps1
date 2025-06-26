@@ -113,6 +113,10 @@ switch ($choice) {
         others
     }
     3 {
+        Write-Host "You chose 'Secure information'."
+        others
+    }
+    4 {
         Write-Host "You chose 'Network configuration'."
         Write-Host "Fetching network information..."
         
@@ -128,18 +132,18 @@ switch ($choice) {
         # Pause to allow user to read the information
         Read-Host "Press Enter to continue..."
     }
-    4 {
+    5 {
         Write-Host "You chose 'File management'."
     }
-    5 {
+    6 {
         Write-Host "You chose 'Others'."
         others
     }
-    6 {
+    7 {
         Write-Host "You chose 'Secure information'."
         others
     }
-    7 {
+    8 {
         Write-Host "Exitting the program. Goodbye!"
         exit
     }
